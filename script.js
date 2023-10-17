@@ -29,6 +29,8 @@ function screenSize() {
 
 
     }
+
+    iconBar();
 }
 
 function iconBar() {
@@ -55,6 +57,27 @@ function iconBar() {
     })
 
 }
+
+
+function topButton() {
+    let button = document.getElementById('topButton');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            button.style.opacity = 1;
+        } else {
+            button.style.opacity = 0;
+        }
+    })
+
+    button.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    })
+}
+
+topButton();
 screenSize();
-iconBar();
 

@@ -309,7 +309,13 @@ body {
 
     .card {
         transform: scale(0.5);
+        filter: blur(0);
+        background-color: #FDD400;
+        border: 5px solid #00fdbe;
+        color: #000;
+
     }
+
 
     .card:hover {
         transform: scale(0.6);
@@ -327,4 +333,22 @@ body {
     }
 
 
+}
+
+
+
+#topButton {
+    opacity: 0;
+    padding: 15px 15px;
+    border-radius: 50%;
+    background-color: var(--second-border-color);
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
 }
